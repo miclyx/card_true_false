@@ -1,6 +1,6 @@
 const supabaseUrl = 'https://ghjtiktynoidljnthqjc.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdoanRpa3R5bm9pZGxqbnRocWpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzMyNzY4MjgsImV4cCI6MjA0ODg1MjgyOH0.pff0q4Zz7HxE1MvlXOblZRpV-javKLJdexVyl_wc0IE';
-const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
 // 全局变量
 let words = [];       // 所有单词数据（从 words.json 加载）
@@ -62,7 +62,7 @@ async function saveProgress() {
   };
 
   // 使用 upsert（若 id 冲突则更新）
-  const { data, error } = await supabase
+  const { data, error } = await supabaseClient
     .from('progress')
     .upsert({
       id: 1,
@@ -79,7 +79,7 @@ async function saveProgress() {
 
 // 从 Supabase 加载进度
 async function loadProgress() {
-  const { data, error } = await supabase
+  const { data, error } = await supabaseClient
     .from('progress')
     .select('progress_data')
     .eq('id', 1)
