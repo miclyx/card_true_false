@@ -109,24 +109,22 @@ async function loadProgress() {
  * 如果 currentWord.isTrue 为真，则 “对” 按钮是正确答案；否则 “错” 按钮是正确答案。
  */
 function highlightAnswer() {
-  // 先清除上一次的高亮（以防万一）
-  btnTrue.classList.remove("correct", "wrong");
-  btnFalse.classList.remove("correct", "wrong");
+  // 先清除上一次的高亮
+  btnTrue.classList.remove("correct");
+  btnFalse.classList.remove("correct");
 
   if (currentWord.isTrue) {
-    // “对” 是正确答案
+    // 如果当前词的正确答案是“对”，则高亮“对”按钮
     btnTrue.classList.add("correct");
-    btnFalse.classList.add("wrong");
   } else {
-    // “错” 是正确答案
+    // 否则高亮“错”按钮
     btnFalse.classList.add("correct");
-    btnTrue.classList.add("wrong");
   }
 
   // 一秒后移除高亮并显示下一题
   setTimeout(() => {
-    btnTrue.classList.remove("correct", "wrong");
-    btnFalse.classList.remove("correct", "wrong");
+    btnTrue.classList.remove("correct");
+    btnFalse.classList.remove("correct");
     showNextWord();
   }, 1000);
 }
