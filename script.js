@@ -8,6 +8,10 @@ let mainDeck = [];    // 当前需要练习的单词（包含正确计数）
 let wrongWords = [];  // 答错的单词记录（可选，用于统计或后续复习）
 let currentWord = null;
 
+// 获取按钮引用，便于后续操作
+const btnTrue = document.getElementById("btnTrue");
+const btnFalse = document.getElementById("btnFalse");
+
 // 从 words.json 加载所有单词
 function loadWords() {
   fetch('words.json')
@@ -37,8 +41,8 @@ function initWord(word) {
 function showNextWord() {
   if (mainDeck.length === 0 && wrongWords.length === 0) {
     document.getElementById("word").textContent = "恭喜，全部完成!";
-    document.getElementById("btnTrue").disabled = true;
-    document.getElementById("btnFalse").disabled = true;
+    btnTrue.disabled = true;
+    btnFalse.disabled = true;
     return;
   }
   if (mainDeck.length === 0) {
@@ -100,31 +104,57 @@ async function loadProgress() {
   showNextWord();
 }
 
+/**
+ * 高亮正确答案
+ * 如果 currentWord.isTrue 为真，则 “对” 按钮是正确答案；否则 “错” 按钮是正确答案。
+ */
+function highlightAnswer() {
+  // 先清除上一次的高亮（以防万一）
+  btnTrue.classList.remove("correct", "wrong");
+  btnFalse.classList.remove("correct", "wrong");
+
+  if (currentWord.isTrue) {
+    // “对” 是正确答案
+    btnTrue.classList.add("correct");
+    btnFalse.classList.add("wrong");
+  } else {
+    // “错” 是正确答案
+    btnFalse.classList.add("correct");
+    btnTrue.classList.add("wrong");
+  }
+
+  // 一秒后移除高亮并显示下一题
+  setTimeout(() => {
+    btnTrue.classList.remove("correct", "wrong");
+    btnFalse.classList.remove("correct", "wrong");
+    showNextWord();
+  }, 1000);
+}
+
 // 按钮点击事件：选择“对”
-document.getElementById("btnTrue").addEventListener("click", function() {
+btnTrue.addEventListener("click", function() {
   if (currentWord) {
     initWord(currentWord);
     if (currentWord.isTrue) {
       currentWord.correctCount++;
       document.getElementById("feedback").textContent = "正确！ (" + currentWord.correctCount + " / 3)";
-      // 累计答对三次后，移除该单词
       if (currentWord.correctCount >= 3) {
         mainDeck.splice(currentWord.index, 1);
       }
     } else {
       document.getElementById("feedback").textContent = "错误！";
-      // 答错时，不重置累计答对次数
       if (!wrongWords.some(w => w.text === currentWord.text)) {
         wrongWords.push(currentWord);
       }
     }
     saveProgress();
-    setTimeout(showNextWord, 1000);
+    // 高亮正确答案，不论用户点击的是哪一个按钮
+    highlightAnswer();
   }
 });
 
 // 按钮点击事件：选择“错”
-document.getElementById("btnFalse").addEventListener("click", function() {
+btnFalse.addEventListener("click", function() {
   if (currentWord) {
     initWord(currentWord);
     if (!currentWord.isTrue) {
@@ -140,7 +170,7 @@ document.getElementById("btnFalse").addEventListener("click", function() {
       }
     }
     saveProgress();
-    setTimeout(showNextWord, 1000);
+    highlightAnswer();
   }
 });
 
