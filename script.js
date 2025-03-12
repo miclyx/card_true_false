@@ -143,12 +143,10 @@ btnTrue.addEventListener("click", function() {
       }
     } else {
       document.getElementById("feedback").textContent = "错误！";
-      if (!wrongWords.some(w => w.text === currentWord.text)) {
-        wrongWords.push(currentWord);
-      }
+      // 回答错误，重置该词的正确计数为0
+      currentWord.correctCount = 0;
     }
     saveProgress();
-    // 高亮正确答案，不论用户点击的是哪一个按钮
     highlightAnswer();
   }
 });
@@ -165,9 +163,8 @@ btnFalse.addEventListener("click", function() {
       }
     } else {
       document.getElementById("feedback").textContent = "错误！";
-      if (!wrongWords.some(w => w.text === currentWord.text)) {
-        wrongWords.push(currentWord);
-      }
+      // 回答错误，重置该词的正确计数为0
+      currentWord.correctCount = 0;
     }
     saveProgress();
     highlightAnswer();
