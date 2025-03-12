@@ -3,6 +3,10 @@ let mainDeck = [];
 let wrongWords = [];
 let currentWord = null;
 
+const supabaseUrl = 'https://ghjtiktynoidljnthqjc.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdoanRpa3R5bm9pZGxqbnRocWpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzMyNzY4MjgsImV4cCI6MjA0ODg1MjgyOH0.pff0q4Zz7HxE1MvlXOblZRpV-javKLJdexVyl_wc0IE';
+const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
 function loadWords() {
   fetch('words.json')
     .then(response => response.json())
