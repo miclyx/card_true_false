@@ -45,3 +45,14 @@ button:active {
   height: 24px;
   font-size: 18px;
 }
+
+.correct {
+  background-color: green;
+  color: #fff;
+}
+
+.wrong {
+  background-color: red;
+  color: #fff;
+}
+
