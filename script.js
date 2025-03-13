@@ -113,18 +113,26 @@ function highlightAnswer() {
   btnTrue.classList.remove("correct");
   btnFalse.classList.remove("correct");
 
+  // 根据单词的正确答案，仅高亮正确的按钮
   if (currentWord.isTrue) {
-    // 如果当前词的正确答案是“对”，则高亮“对”按钮
     btnTrue.classList.add("correct");
   } else {
-    // 否则高亮“错”按钮
     btnFalse.classList.add("correct");
   }
 
-  // 一秒后移除高亮并显示下一题
+  // 显示翻译信息（如果 translation 字段存在）
+  const translationText = currentWord.translation ? `翻译：${currentWord.translation}` : "";
+  // 这里可以选择将反馈文本更新为：正确/错误 + 翻译
+  // 如果你之前 feedback 已经显示了 "正确！" 或 "错误！"，可以附加一个换行和翻译
+  const feedbackElem = document.getElementById("feedback");
+  feedbackElem.innerHTML += `<br>${translationText}`;
+
+  // 一秒后移除高亮和翻译后显示下一题
   setTimeout(() => {
     btnTrue.classList.remove("correct");
     btnFalse.classList.remove("correct");
+    // 清除反馈区域，为下一题准备
+    feedbackElem.textContent = "";
     showNextWord();
   }, 1000);
 }
@@ -141,8 +149,7 @@ btnTrue.addEventListener("click", function() {
       }
     } else {
       document.getElementById("feedback").textContent = "错误！";
-      // 回答错误，重置该词的正确计数为0
-      currentWord.correctCount = 0;
+      currentWord.correctCount = 0; // 连续答题要求，错误后重置
     }
     saveProgress();
     highlightAnswer();
@@ -161,8 +168,7 @@ btnFalse.addEventListener("click", function() {
       }
     } else {
       document.getElementById("feedback").textContent = "错误！";
-      // 回答错误，重置该词的正确计数为0
-      currentWord.correctCount = 0;
+      currentWord.correctCount = 0; // 错误后重置
     }
     saveProgress();
     highlightAnswer();
