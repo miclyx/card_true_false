@@ -57,3 +57,12 @@ button:active {
   color: #fff;
 }
 
+.correct-true {
+  background-color: green;  /* “对”时按钮显示绿色 */
+  color: white;
+}
+
+.correct-false {
+  background-color: red;    /* “错”时按钮显示红色 */
+  color: white;
+}
