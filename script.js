@@ -12,6 +12,16 @@ let currentWord = null;
 const btnTrue = document.getElementById("btnTrue");
 const btnFalse = document.getElementById("btnFalse");
 
+function resetProgress() {
+  // 将 mainDeck 重置为所有单词，并清空 wrongWords
+  mainDeck = [...words];
+  wrongWords = [];
+  // 重置所有单词的 correctCount
+  words.forEach(word => word.correctCount = 0);
+  // 更新后台记录
+  saveProgress();
+}
+
 // 从 words.json 加载所有单词
 function loadWords() {
   fetch('words.json')
@@ -43,6 +53,22 @@ function showNextWord() {
     document.getElementById("word").textContent = "恭喜，全部完成!";
     btnTrue.disabled = true;
     btnFalse.disabled = true;
+    return;
+  }
+      // 显示“再来一次”按钮
+    const feedbackElem = document.getElementById("feedback");
+    const retryBtn = document.createElement("button");
+    retryBtn.textContent = "再来一次";
+    retryBtn.addEventListener("click", function() {
+      resetProgress();
+      // 启用按钮
+      btnTrue.disabled = false;
+      btnFalse.disabled = false;
+      // 移除重试按钮
+      retryBtn.remove();
+      showNextWord();
+    });
+    feedbackElem.appendChild(retryBtn);
     return;
   }
   if (mainDeck.length === 0) {
