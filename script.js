@@ -113,13 +113,11 @@ function highlightAnswer() {
   btnTrue.classList.remove("correct", "wrong");
   btnFalse.classList.remove("correct", "wrong");
 
-  // 根据单词的正确答案，仅高亮正确的按钮
+  // 根据 currentWord.isTrue 仅高亮正确答案按钮
   if (currentWord.isTrue) {
     btnTrue.classList.add("correct");
-    btnFalse.classList.add("wrong");
   } else {
     btnFalse.classList.add("correct");
-    btnTrue.classList.add("wrong");
   }
 
 
