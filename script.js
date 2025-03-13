@@ -116,12 +116,11 @@ function highlightAnswer() {
   // 根据单词的正确答案，仅高亮正确的按钮
   if (currentWord.isTrue) {
     btnTrue.classList.add("correct");
+    btnFalse.classList.add("wrong");
   } else {
     btnFalse.classList.add("correct");
+    btnTrue.classList.add("wrong");
   }
-  console.log(currentWord);
-  console.log("当前单词对象：", currentWord);
-  console.log("翻译字段：", currentWord.translation);
 
 
   // 显示翻译信息（如果 translation 字段存在）
