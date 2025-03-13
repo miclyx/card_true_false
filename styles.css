@@ -16,6 +16,7 @@ body {
   text-align: center;
   width: 90%;
   max-width: 400px;
+  min-height: 300px;
 }
 
 #word {
