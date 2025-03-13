@@ -156,7 +156,7 @@ function highlightAnswer() {
     btnFalse.classList.remove("correct-true", "correct-false");
     feedbackElem.textContent = "";
     showNextWord();
-  }, 2000);
+  }, 1000);
 }
 
 // 按钮点击事件：选择“对”
