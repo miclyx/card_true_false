@@ -119,6 +119,7 @@ function highlightAnswer() {
   } else {
     btnFalse.classList.add("correct");
   }
+  console.log(currentWord);
 
   // 显示翻译信息（如果 translation 字段存在）
   const translationText = currentWord.translation ? `翻译：${currentWord.translation}` : "";
