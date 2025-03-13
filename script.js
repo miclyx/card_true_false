@@ -110,8 +110,8 @@ async function loadProgress() {
  */
 function highlightAnswer() {
   // 先清除上一次的高亮
-  btnTrue.classList.remove("correct");
-  btnFalse.classList.remove("correct");
+  btnTrue.classList.remove("correct", "wrong");
+  btnFalse.classList.remove("correct", "wrong");
 
   // 根据单词的正确答案，仅高亮正确的按钮
   if (currentWord.isTrue) {
