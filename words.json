@@ -1,402 +1,502 @@
 [
     {
         "text": "chiusa",
+        "translation": " 关闭的（f. 形容词），如道路关闭",
         "isTrue": false
     },
     {
         "text": "unicamente",
+        "translation": " 仅仅，只是",
         "isTrue": false
     },
     {
         "text": "diurne",
+        "translation": " 白天的（多用于指白天行驶或白天灯光）",
         "isTrue": false
     },
     {
         "text": "obbligatoriamente",
+        "translation": " 强制地，必须地",
         "isTrue": false
     },
     {
         "text": "quanti",
+        "translation": " 多少，若干",
         "isTrue": false
     },
     {
         "text": "alternato",
+        "translation": " 交替的，轮流的",
         "isTrue": false
     },
     {
         "text": "bere",
+        "translation": " 喝（常指喝酒，驾车前喝酒即酒驾）",
         "isTrue": false
     },
     {
         "text": "infrazione",
+        "translation": " 违章，违法行为",
         "isTrue": false
     },
     {
         "text": "richiamare",
+        "translation": " 召回，提醒，警示",
         "isTrue": false
     },
     {
         "text": "allontanare",
+        "translation": " 远离，使离开",
         "isTrue": false
     },
     {
         "text": "mezzeria",
+        "translation": " （车道）中线",
         "isTrue": false
     },
     {
         "text": "necessitano",
+        "translation": " 他们需要……（动词necessitare的三人称复数）",
         "isTrue": false
     },
     {
         "text": "prosegue",
+        "translation": " 继续前行（动词proseguire的三人称）",
         "isTrue": false
     },
     {
         "text": "spazzatura",
+        "translation": " 垃圾",
         "isTrue": false
     },
     {
         "text": "veda",
+        "translation": " “看”（动词vedere的虚拟式/命令式，可能用于指示）",
         "isTrue": false
     },
     {
         "text": "acciaio",
+        "translation": " 钢，钢材",
         "isTrue": false
     },
     {
         "text": "adesivo",
+        "translation": " 粘合剂，贴纸（可指粘性标贴）",
         "isTrue": false
     },
     {
         "text": "apporre",
+        "translation": " 贴上，附加上（如贴标签）",
         "isTrue": false
     },
     {
         "text": "aumenti",
+        "translation": " 增加，上升",
         "isTrue": false
     },
     {
         "text": "biforcazione",
+        "translation": " 分叉，岔路口",
         "isTrue": false
     },
     {
         "text": "carabinieri",
+        "translation": " 宪兵（意大利的一支警察部队）",
         "isTrue": false
     },
     {
         "text": "caselli",
+        "translation": " 收费站（高速公路）",
         "isTrue": false
     },
     {
         "text": "cellulari",
+        "translation": " 手机（复数）",
         "isTrue": false
     },
     {
         "text": "colonnina",
+        "translation": " 柱子，立柱（在交通语境可能指紧急呼叫柱等）",
         "isTrue": false
     },
     {
         "text": "coprono",
+        "translation": " 覆盖，他们覆盖（动词coprire的三人称复数）",
         "isTrue": false
     },
     {
         "text": "frizione",
+        "translation": " 离合器",
         "isTrue": false
     },
     {
         "text": "vanno",
+        "translation": " 他们去……（动词andare的三人称复数）",
         "isTrue": false
     },
     {
         "text": "interrotta",
+        "translation": " 中断的，被切断的",
         "isTrue": false
     },
     {
         "text": "pagamento",
+        "translation": " 付款，支付",
         "isTrue": false
     },
     {
         "text": "affiancati",
+        "translation": " 并排的，并列的",
         "isTrue": false
     },
     {
         "text": "avvisatore",
+        "translation": " 报警器，提示器（如声响提示装置）",
         "isTrue": false
     },
     {
         "text": "facoltativo",
+        "translation": " 可选的，非强制的",
         "isTrue": false
     },
     {
         "text": "parco",
+        "translation": " 公园；（在交通术语中也可能指车辆停放区域）",
         "isTrue": false
     },
     {
         "text": "acceleratore",
+        "translation": " 加速器，油门踏板",
         "isTrue": false
     },
     {
         "text": "chilometro",
+        "translation": " 公里",
         "isTrue": false
     },
     {
         "text": "nastro",
+        "translation": " 带子，胶带（在交通中也可能指警示带）",
         "isTrue": false
     },
     {
         "text": "ognuna",
+        "translation": " 每一个，各个",
         "isTrue": false
     },
     {
         "text": "smontare",
+        "translation": " 拆卸，下车（某些场合也指从车上下来）",
         "isTrue": false
     },
     {
         "text": "tenuti",
+        "translation": " 被保持，被维持（动词tenere的过去分词复数）",
         "isTrue": false
     },
     {
         "text": "accelerando",
+        "translation": " 正在加速",
         "isTrue": false
     },
     {
         "text": "accompagnati",
+        "translation": " 被陪同，被伴随（过去分词复数）",
         "isTrue": false
     },
     {
         "text": "alcuna",
+        "translation": " 任何，一些（阴性形式）",
         "isTrue": false
     },
     {
         "text": "assolutamente",
+        "translation": " 绝对地，务必",
         "isTrue": false
     },
     {
         "text": "avvenuto",
+        "translation": " 发生了的（过去分词）",
         "isTrue": false
     },
     {
         "text": "camminare",
+        "translation": " 走路",
         "isTrue": false
     },
     {
         "text": "carri",
+        "translation": " 车辆，车厢（复数）",
         "isTrue": false
     },
     {
         "text": "cavalletti",
+        "translation": " 支架（如支撑车体的支架）",
         "isTrue": false
     },
     {
         "text": "chiuso",
+        "translation": " 关闭的，封闭的（m. 形容词）",
         "isTrue": false
     },
     {
         "text": "condotte",
+        "translation": " 管道，通道；也可指行为（过去分词阴性复数）",
         "isTrue": false
     },
     {
         "text": "cruscotto",
+        "translation": " 仪表盘",
         "isTrue": false
     },
     {
         "text": "richiede",
+        "translation": " 需要、要求",
         "isTrue": true
     },
     {
         "text": "improvvisamente",
+        "translation": " 突然地",
         "isTrue": true
     },
     {
         "text": "alcune",
+        "translation": " 一些、若干",
         "isTrue": true
     },
     {
         "text": "ordinariamente",
+        "translation": " 通常地、正常情况下",
         "isTrue": true
     },
     {
         "text": "effettiva",
+        "translation": " 实际的、有效的",
         "isTrue": true
     },
     {
         "text": "limitare",
+        "translation": " 限制、减小",
         "isTrue": true
     },
     {
         "text": "ben",
+        "translation": " 很好、非常",
         "isTrue": true
     },
     {
         "text": "comportare",
+        "translation": " 导致、带来（某种后果）",
         "isTrue": true
     },
     {
         "text": "diminuzione",
+        "translation": " 减少、降低",
         "isTrue": true
     },
     {
         "text": "rendere",
+        "translation": " 使变得、使成为",
         "isTrue": true
     },
     {
         "text": "sedile",
+        "translation": " 座椅、座位",
         "isTrue": true
     },
     {
         "text": "dovuto",
+        "translation": " 应当的、应有的",
         "isTrue": true
     },
     {
         "text": "inefficienti",
+        "translation": " 效率低的、无效的",
         "isTrue": true
     },
     {
         "text": "luoghi",
+        "translation": " 地点、场所",
         "isTrue": true
     },
     {
         "text": "periodo",
+        "translation": " 时期、时段",
         "isTrue": true
     },
     {
         "text": "ridotto",
+        "translation": " 减少的、降低的",
         "isTrue": true
     },
     {
         "text": "sopraggiungano",
+        "translation": " 他们赶上、他们到来（动词sopraggiungere的虚拟式/命令式）",
         "isTrue": true
     },
     {
         "text": "tamponare",
+        "translation": " 追尾、（车辆）从后方撞上",
         "isTrue": true
     },
     {
         "text": "adottare",
+        "translation": " 采用、采取",
         "isTrue": true
     },
     {
         "text": "comunale",
+        "translation": " 市政的、公共的",
         "isTrue": true
     },
     {
         "text": "effetto",
+        "translation": " 效果、影响",
         "isTrue": true
     },
     {
         "text": "finestrini",
+        "translation": " 车窗（复数）",
         "isTrue": true
     },
     {
         "text": "gettare",
+        "translation": " 扔、丢",
         "isTrue": true
     },
     {
         "text": "igienico-sanitari",
+        "translation": " 卫生的、与健康相关的",
         "isTrue": true
     },
     {
         "text": "mal",
+        "translation": " 坏、不好（如 mal di testa 头痛）",
         "isTrue": true
     },
     {
         "text": "brusche",
+        "translation": " 突然的、急剧的（复数阴性）",
         "isTrue": true
     },
     {
         "text": "potrebbe",
+        "translation": " 可能（第三人称条件式）",
         "isTrue": true
     },
     {
         "text": "impedire",
+        "translation": " 阻止、妨碍",
         "isTrue": true
     },
     {
         "text": "aprire",
+        "translation": " 打开",
         "isTrue": true
     },
     {
         "text": "esterno",
+        "translation": " 外部的、外面的",
         "isTrue": true
     },
     {
         "text": "abbagliare",
+        "translation": " 使目眩、晃眼（常指强光）",
         "isTrue": true
     },
     {
         "text": "causare",
+        "translation": " 引起、造成",
         "isTrue": true
     },
     {
         "text": "difficoltoso",
+        "translation": " 困难的、艰难的",
         "isTrue": true
     },
     {
         "text": "frenate",
+        "translation": " 刹车（名词，复数可指多次刹车）",
         "isTrue": true
     },
     {
         "text": "ripetuto",
+        "translation": " 重复的、反复的",
         "isTrue": true
     },
     {
         "text": "accinge",
+        "translation": " 他/她正准备（动词accingersi的变位）",
         "isTrue": true
     },
     {
         "text": "incorrere",
+        "translation": " 招致、遭受（如 incorrere in sanzioni 受到处罚）",
         "isTrue": true
     },
     {
         "text": "intralciare",
+        "translation": " 阻碍、妨碍",
         "isTrue": true
     },
     {
         "text": "movimenti",
+        "translation": " 动作、移动（复数）",
         "isTrue": true
     },
     {
         "text": "potersi",
+        "translation": " 能够（带反身用法，具体含义视上下文）",
         "isTrue": true
     },
     {
         "text": "rimuovere",
+        "translation": " 移除、清除",
         "isTrue": true
     },
     {
         "text": "sporgente",
+        "translation": " 突出的、伸出的",
         "isTrue": true
     },
     {
         "text": "tornanti",
+        "translation": " 急转弯、回头弯（多见于山路）",
         "isTrue": true
     },
     {
         "text": "atmosferiche",
+        "translation": " 大气的、气象的（如 condizioni atmosferiche 气象條件）",
         "isTrue": true
     },
     {
         "text": "diventare",
+        "translation": " 变成、成为",
         "isTrue": true
     },
     {
         "text": "elevate",
+        "translation": " 高的、升高的（复数阴性）",
         "isTrue": true
     },
     {
         "text": "generale",
+        "translation": " 一般的、总体的",
         "isTrue": true
     },
     {
         "text": "guidando",
+        "translation": " 正在驾驶、开车中（动词guidare的副动词形式）",
         "isTrue": true
     },
     {
         "text": "maggiormente",
+        "translation": " 更多地、主要地",
         "isTrue": true
     },
     {
         "text": "medico",
+        "translation": " 医疗的；医生（作名词时）",
         "isTrue": true
     }
 ]
