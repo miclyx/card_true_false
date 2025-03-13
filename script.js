@@ -109,30 +109,28 @@ async function loadProgress() {
  * 如果 currentWord.isTrue 为真，则 “对” 按钮是正确答案；否则 “错” 按钮是正确答案。
  */
 function highlightAnswer() {
-  // 先清除上一次的高亮
-  btnTrue.classList.remove("correct", "wrong");
-  btnFalse.classList.remove("correct", "wrong");
+  // 先清除按钮上一次的高亮类
+  btnTrue.classList.remove("correct-true", "correct-false");
+  btnFalse.classList.remove("correct-true", "correct-false");
 
-  // 根据 currentWord.isTrue 仅高亮正确答案按钮
+  // 如果当前题目的正确答案是“对”
   if (currentWord.isTrue) {
-    btnTrue.classList.add("correct");
+    // “对”按钮加绿色
+    btnTrue.classList.add("correct-true");
   } else {
-    btnFalse.classList.add("correct");
+    // 否则，“错”按钮加红色
+    btnFalse.classList.add("correct-false");
   }
 
-
-  // 显示翻译信息（如果 translation 字段存在）
+  // （可选）显示翻译或其他反馈
   const translationText = currentWord.translation ? `翻译：${currentWord.translation}` : "";
-  // 这里可以选择将反馈文本更新为：正确/错误 + 翻译
-  // 如果你之前 feedback 已经显示了 "正确！" 或 "错误！"，可以附加一个换行和翻译
   const feedbackElem = document.getElementById("feedback");
   feedbackElem.innerHTML += `<br>${translationText}`;
 
-  // 一秒后移除高亮和翻译后显示下一题
+  // 一段时间后移除高亮并进入下一题
   setTimeout(() => {
-    btnTrue.classList.remove("correct");
-    btnFalse.classList.remove("correct");
-    // 清除反馈区域，为下一题准备
+    btnTrue.classList.remove("correct-true", "correct-false");
+    btnFalse.classList.remove("correct-true", "correct-false");
     feedbackElem.textContent = "";
     showNextWord();
   }, 2000);
