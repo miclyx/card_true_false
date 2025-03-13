@@ -134,7 +134,7 @@ function highlightAnswer() {
     // 清除反馈区域，为下一题准备
     feedbackElem.textContent = "";
     showNextWord();
-  }, 1000);
+  }, 2000);
 }
 
 // 按钮点击事件：选择“对”
